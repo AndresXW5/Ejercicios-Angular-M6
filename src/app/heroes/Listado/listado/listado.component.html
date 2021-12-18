@@ -7,3 +7,12 @@
 <button (click) = "eliminarHeroe()" >Eliminar Héroe</button>
 <!-- <h1>Se ha eliminado: {{eliminado}}</h1> -->
 <h1 *ngIf="eliminado != ''">Se ha eliminado: {{eliminado}}</h1>
+
+<ng-template #noborrado>
+  <h1>No se ha borrado ningún héroe.</h1>
+</ng-template>
+<h1 *ngIf="elegir != ''; else noseleccionado">El superhéroe seleccionado es: {{elegir}}</h1>
+<ng-template #noseleccionado>
+  <h1>No se ha seleccionado ningún héroe.</h1>
+</ng-template>
+<button (click) = "resetearLista()" >Resetear lista</button>

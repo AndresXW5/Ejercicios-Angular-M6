@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroeComponent } from './heroes/Heroe/heroe.component';
 import { ListadoComponent } from './heroes/Listado/listado/listado.component';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListadoComponent } from './heroes/Listado/listado/listado.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]

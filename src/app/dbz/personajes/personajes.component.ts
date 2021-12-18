@@ -1,0 +1,17 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { Personaje } from '../interfaces/interfaces.module';
+
+@Component({
+  selector: 'app-personajes',
+  templateUrl: './personajes.component.html',
+  styleUrls: ['./personajes.component.css']
+})
+export class PersonajesComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  @Input() personajesComponenteHijo: Personaje[] = [];
+}

@@ -14,6 +14,7 @@ export class ListadoComponent implements OnInit {
 
   heroes: string[] = ['Spiderman', 'Superman', 'IronMan', 'Doctor Strange', 'Star Lord', 'Logan'];
   eliminado: string = "";
+  elegir: string = "";
 
   eliminarHeroe(){
     if(this.heroes.length == 0){
@@ -22,6 +23,15 @@ export class ListadoComponent implements OnInit {
       this.eliminado = this.heroes[0];
     }
     this.heroes.splice(0,1);
+  }
+
+  seleccionHeroe(heroe: string) {
+    this.elegir = heroe;
+  }
+  resetearLista(){
+    this.heroes = ['Spiderman', 'Superman', 'IronMan', 'Doctor Strange', 'Star Lord', 'Logan'];
+    this.eliminado = "";
+    this.elegir = "";
   }
 
 }
