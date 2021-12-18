@@ -1,0 +1,9 @@
+<h1>//////////////////////////////////////////////////////</h1>
+<h1>Ejercicio 2</h1>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let heroe of heroes">{{ heroe }}</li>
+</ul>
+
+<button (click) = "eliminarHeroe()" >Eliminar Héroe</button>
+<!-- <h1>Se ha eliminado: {{eliminado}}</h1> -->
+<h1 *ngIf="eliminado != ''">Se ha eliminado: {{eliminado}}</h1>

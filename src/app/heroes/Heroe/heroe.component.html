@@ -1,0 +1,33 @@
+<h1>Mis datos</h1>
+<h2>En HTML:</h2>
+<p>El nombre es {{$nombre}} y la edad es {{$numero}}</p>
+<p>Concantenados: {{$nombre + ", " + $numero}}</p>
+<p>Nombre en mayusculas: {{$nombre|uppercase}}</p>
+<br>
+
+<h3>Botón que cambie el nombre del héroe</h3>
+<p>Ingrese nombre
+  <input type="text" [(ngModel)]="nombre">
+  <button type="submit" [(ngModel)]="nombre">Aplicar</button>
+</p>
+  <p>El nombre es: {{nombre}} </p>
+
+<h3>Botón que cambie la edad del héroe.</h3>
+<p>Ingrese edad
+  <input type="number" [(ngModel)]="edad">
+  <button type="submit" [(ngModel)]="edad">Aplicar</button>
+</p>
+  <p>La edad es {{ edad }} años</p>
+<br>
+
+<h3>Funciones que devueven el nombre, la edad y lo reinicia.</h3>
+<button (click)="cambiarNombre()">Cambiar el nombre</button>
+
+<button (click) = "cambiarEdad()">Cambiar Edad</button>
+
+<button (click) = "reiniciar()">Reiniciar</button>
+
+<p>El nombre es {{nombre}}, tiene {{edad}} años.</p>
+<!-- <button (click)="cambiarNombre">Cambiar nombre</button> -->
+
+
